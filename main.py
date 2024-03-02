@@ -44,14 +44,16 @@ class FirstScr(Screen):
         self.txt = Label(text= 'Екран: 1')
         vl.add_widget(self.txt)  
 
-        hl_0 = BoxLayout(size_hint=(0.8, None), height='30sp')
+        #size_hint - частка, яку займатиме цей лейаут по осі Х(80%) та Y(10%) відносно того, де він знаходиться
+        hl_0 = BoxLayout(size_hint=(0.8, 0.1))
         lbl1 = Label(text='Введіть пароль:', halign='right')
         self.input = TextInput(multiline=False)  
 
         hl_0.add_widget(lbl1)
         hl_0.add_widget(self.input)
         vl.add_widget(hl_0)
-     
+
+        #pos_hint - змінює положення віджету. pos_hint={<яка_частина_віджета>: <де_розташована_на_екрані>}
         hl = BoxLayout(size_hint=(0.5, 0.2), pos_hint={'center_x': 0.5})
         btn_false = Button(text="OK!")
         btn_back = ScrButton(self, direction='right', goal='main', text="Назад") 
