@@ -100,14 +100,6 @@ class CheckSits(Screen):
 
         #6) Додати цей вертикальний лейаут у вікно (у self)
 
-        instr = Label(text=txt_sits)
-        self.btn = Button(text='Продовжити', size_hint=(0.3, 0.2), pos_hint={'center_x': 0.5})
-        self.btn.on_press = self.next
-
-        outer = BoxLayout(orientation='vertical', padding=8, spacing=8)
-        outer.add_widget(instr)
-        outer.add_widget(self.btn)
-        self.add_widget(outer)
 
     #функція, яка спрацьовуватиме при натисканні на кнопку "Продовжити" на третьому екрані
     def next(self):
